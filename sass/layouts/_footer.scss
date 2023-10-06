@@ -1,0 +1,71 @@
+.footer {
+  padding: 10rem 0;
+  background-color: #333;
+  @include response-tab-land {
+    .container {
+      max-width: 900px;
+    }
+  }
+  &__logo-box {
+    text-align: center;
+    padding-bottom: 8rem;
+  }
+  &__logo-img {
+    width: 15rem;
+    height: auto;
+  }
+  &__text-box {
+    display: flex;
+    justify-content: space-between;
+    @include response-mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+    }
+  }
+  &__paragraph {
+    width: 42%;
+    color: $white-color;
+    font-size: 1.5rem;
+    padding-top: 4rem;
+    border-top: 2px solid $gray-color-light-3;
+    @include response-tab-land {
+      width: 40%;
+    }
+    @include response-mobile {
+      width: 70%;
+    }
+  }
+  &__navigation {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 4rem;
+    border-top: 2px solid $gray-color-light-3;
+    @include response-tab-land {
+      flex-wrap: wrap;
+      width: 40%;
+    }
+    @include response-mobile {
+      width: 70%;
+    }
+  }
+  .footer_navigation-item:link,
+  .footer_navigation-item:visited {
+    display: inline-block;
+    // padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white-color;
+    background-color: #333;
+    transition: all 0.2s;
+  }
+  .footer_navigation-item:hover,
+  .footer_navigation-item:active {
+    color: $main-color-med;
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
+  }
+}

@@ -1,0 +1,142 @@
+.features-section {
+  transform: skewY(-7deg);
+  padding: 20rem 0;
+  margin-top: -10rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($main-color-light, 0.8),
+      rgba($main-color-dark, 0.8)
+    ),
+    url(../../img/nat-4.jpg);
+  background-position: top;
+  background-size: cover;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+  @include response-tab-land {
+    .container {
+      max-width: 800px;
+    }
+  }
+  @include response-tab-port {
+    .container {
+      max-width: 600px;
+    }
+  }
+  @include response-mobile {
+    .container {
+      max-width: 270px;
+    }
+  }
+}
+.tours-section {
+  padding: 25rem 0 12rem 0;
+  background-color: $gray-color-light-1;
+  margin-top: -10rem;
+  @include response-tab-land {
+    .container {
+      max-width: 900px;
+    }
+  }
+  @include response-tab-port {
+    .container {
+      max-width: 600px;
+    }
+  }
+  @include response-mobile {
+    .container {
+      max-width: 300px;
+    }
+  }
+}
+.testimonials-section {
+  position: relative;
+  padding: 12rem 0;
+  @include response-tab-land {
+    .container {
+      max-width: 900px;
+    }
+  }
+  @include response-tab-port {
+    .container {
+      max-width: 650px;
+    }
+  }
+  @include response-mobile {
+    .container {
+      max-width: 300px;
+    }
+  }
+  // background-color: red;
+}
+.form-section {
+  padding: 15rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $main-color-light,
+    $main-color-dark
+  );
+  @include response-tab-port {
+    padding: 10rem 5rem;
+  }
+  .form-section-container {
+    border-radius: 3px;
+
+    background-image: linear-gradient(
+        105deg,
+        rgba($white-color, 0.85) 0%,
+        rgba($white-color, 0.85) 50%,
+        transparent 50%,
+        transparent 100%
+      ),
+      url(../../img/nat-10.jpg);
+    background-position: top;
+    background-size: cover;
+    @include response-tab-land {
+      max-width: 100%;
+      background-image: linear-gradient(
+          105deg,
+          rgba($white-color, 0.85) 0%,
+          rgba($white-color, 0.85) 65%,
+          transparent 65%,
+          transparent 100%
+        ),
+        url(../../img/nat-10.jpg);
+    }
+    @include response-tab-port {
+      background-image: linear-gradient(
+          105deg,
+          rgba($white-color, 0.85) 0%,
+          rgba($white-color, 0.85) 70%,
+          transparent 70%,
+          transparent 100%
+        ),
+        url(../../img/nat-10.jpg);
+    }
+    @include response-mobile {
+      background-image: linear-gradient(
+          rgba($white-color, 0.85) 0%,
+          rgba($white-color, 0.85) 100%
+        ),
+        url(../../img/nat-10.jpg);
+    }
+  }
+  .form-container {
+    display: grid;
+    width: 50%;
+    justify-content: start;
+    padding-left: 6rem;
+    @include response-tab-land {
+      width: 65%;
+    }
+    @include response-tab-port {
+      width: 70%;
+    }
+    @include response-mobile {
+      width: 100%;
+      justify-content: stretch;
+      padding: 3rem;
+    }
+  }
+}

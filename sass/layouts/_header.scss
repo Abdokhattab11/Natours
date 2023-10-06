@@ -1,0 +1,62 @@
+.header {
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($main-color-light, 0.8),
+      rgba($main-color-dark, 0.8)
+    ),
+    url(../../img/hero-small.jpg);
+  @media (min-resolution: 192dpi) and (min-width: 950px) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($main-color-light, 0.8),
+        rgba($main-color-med, 0.8)
+      ),
+      url(../../img/hero.jpg);
+  }
+  @media (min-width: 1800px) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($main-color-light, 0.8),
+        rgba($main-color-med, 0.8)
+      ),
+      url(../../img/hero.jpg);
+  }
+  background-size: cover;
+  background-position: top;
+  height: 85vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    height: 95vh;
+  }
+  &_logo {
+    animation: moveInRight 1s ease-out;
+    padding: 4rem;
+    backface-visibility: hidden;
+    .header_logo-img {
+      height: 3.5rem;
+    }
+  }
+  .header-btn {
+    animation-name: moveInBottom;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
+  }
+  h2 {
+    backface-visibility: hidden;
+  }
+  .header_text-main {
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+
+  .header_text-sec {
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+}

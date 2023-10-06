@@ -1,0 +1,117 @@
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.7;
+  color: $gray-color;
+  font-weight: 400;
+}
+.header_text {
+  @include centerAbs(40, 50);
+  color: $white-color;
+  text-transform: uppercase;
+  text-align: center;
+  h2 {
+    font-weight: 400;
+    margin-bottom: 5rem;
+  }
+  &-main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    margin-bottom: 0.5rem;
+    @include response-tab-land {
+      letter-spacing: 2.5rem;
+    }
+    @include response-mobile {
+      letter-spacing: 1rem;
+      font-size: 4rem;
+    }
+  }
+  &-sec {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.6rem;
+    font-weight: 600;
+    @include response-tab-land {
+      letter-spacing: 1rem;
+    }
+    @include response-mobile {
+      letter-spacing: 0.5rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+.heading-sec {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $main-color-light,
+    $main-color-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.5s;
+  &:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.1rem 0.2rem 2rem $shadow-color;
+  }
+  @include response-tab-land {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+  @include response-tab-port {
+    font-size: 2.5rem;
+  }
+}
+.about-section {
+  padding: 25rem 0;
+  margin-top: -20vh;
+  background-color: $gray-color-light-1;
+  @include response-tab-land {
+    .container {
+      padding: 4rem;
+      max-width: 950px;
+    }
+  }
+  @include response-tab-port {
+    .container {
+      max-width: 570px;
+    }
+    padding: 25rem 0;
+  }
+  @include response-mobile {
+    .container {
+      max-width: 90%;
+    }
+    .heading_above-text,
+    .paragraph {
+      text-align: center;
+    }
+    padding: 25rem 0 15rem;
+  }
+}
+
+.about-text {
+  padding: 1rem;
+}
+.heading_above-text {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  @include response-tab-land {
+    font-size: 1.5rem;
+  }
+  @include response-mobile {
+    font-size: 1.4rem;
+  }
+}
+.paragraph {
+  font-size: 1.5rem;
+  @include response-mobile {
+    font-size: 1.4rem;
+  }
+}

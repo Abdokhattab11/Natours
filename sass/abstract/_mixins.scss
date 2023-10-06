@@ -1,0 +1,31 @@
+@mixin centerAbs($top, $left) {
+  position: absolute;
+  top: $top * 1%;
+  left: $left * 1%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin response-mobile {
+  @media only screen and (max-width: 40.625em) {
+    // 600px
+    @content;
+  }
+}
+@mixin response-tab-port {
+  @media only screen and (max-width: 59.375em) {
+    // 900px
+    @content;
+  }
+}
+@mixin response-tab-land {
+  @media only screen and (max-width: 80em) {
+    // 1280px
+    @content;
+  }
+}
+@mixin response-large-screen {
+  @media only screen and (min-width: 112.5em) {
+    // 1800px
+    @content;
+  }
+}

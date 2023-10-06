@@ -1,0 +1,127 @@
+.u-center-text {
+  text-align: center;
+}
+.centerByGrid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.centerDivHorizontally {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  @include response-large-screen {
+    max-width: 1400px;
+  }
+}
+.margin-bottom-large {
+  margin-bottom: 8rem;
+  @include response-mobile {
+    margin-bottom: 4rem;
+  }
+}
+.margin-bottom-med {
+  margin-bottom: 4rem;
+  @include response-mobile {
+    margin-bottom: 3rem;
+  }
+}
+.margin-bottom-medLarge {
+  margin-bottom: 6rem;
+  @include response-mobile {
+    margin-bottom: 3rem;
+  }
+}
+.margin-bottom-small {
+  margin-bottom: 2rem;
+  @include response-mobile {
+    margin-bottom: 1rem;
+  }
+}
+.margin-top-large {
+  margin-top: 8rem;
+  @include response-mobile {
+    margin-top: 4rem;
+  }
+}
+.margin-top-med {
+  margin-top: 4rem;
+  @include response-mobile {
+    margin-top: 2rem;
+  }
+}
+.margin-top-small {
+  margin-top: 2rem;
+  @include response-mobile {
+    margin-top: 1rem;
+  }
+}
+.padding-top-large {
+  padding-top: 8rem;
+  @include response-mobile {
+    padding-top: 4rem;
+  }
+}
+.padding-top-med {
+  padding-top: 6rem;
+  @include response-mobile {
+    padding-top: 3rem;
+  }
+}
+.padding-top-small {
+  padding-top: 2rem;
+  @include response-mobile {
+    padding-top: 1rem;
+  }
+}
+.padding-bottom-med {
+  padding-bottom: 6rem;
+  @include response-mobile {
+    padding-bottom: 3rem;
+  }
+}
+.grid {
+  display: grid;
+}
+.grid--2--col {
+  column-gap: 8rem;
+  grid-template-columns: repeat(2, 1fr);
+  @include response-tab-land {
+    column-gap: 5rem;
+  }
+  @include response-tab-port {
+    grid-template-columns: 1fr;
+    row-gap: 7rem;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.grid--3--col {
+  column-gap: 6rem;
+  grid-template-columns: repeat(3, 1fr);
+  @include response-tab-port {
+    row-gap: 6rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  @include response-mobile {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+  }
+}
+.grid--4--col {
+  column-gap: 6rem;
+  grid-template-columns: repeat(4, 1fr);
+  @include response-tab-land {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4rem;
+  }
+  @include response-mobile {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+  }
+}

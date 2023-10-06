@@ -1,0 +1,192 @@
+.tour-card {
+  perspective: 150rem;
+  height: 52rem; // We have ro specify it, beacuse the childs are absoulute
+  position: relative;
+  @include response-tab-port {
+    &:last-child {
+      left: 58%;
+    }
+  }
+  @include response-mobile {
+    &:last-child {
+      left: 0;
+    }
+  }
+  &-side {
+    overflow: hidden;
+    transition: all 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 52rem;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 2rem 3rem $shadow-color;
+    &-front {
+      background-color: #fff;
+    }
+    &-back {
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $sec-color-light,
+          $sec-color-med
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $main-color-light,
+          $main-color-dark
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $third-color-light,
+          $third-color-med
+        );
+      }
+    }
+  }
+  &:hover &-side-front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &-side-back {
+    transform: rotateY(0);
+  }
+  .card-img {
+    height: 23rem;
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &-1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $sec-color-light,
+          $sec-color-med
+        ),
+        url(../../img/nat-5.jpg);
+    }
+    &-2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $main-color-light,
+          $main-color-med
+        ),
+        url(../../img/nat-6.jpg);
+    }
+    &-3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $third-color-light,
+          $third-color-med
+        ),
+        url(../../img/nat-7.jpg);
+    }
+  }
+  .card-heading {
+    color: $white-color;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 300;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+  .card-heading-span {
+    padding: 1rem 1.5rem;
+    &-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($sec-color-light, 0.85),
+        rgba($sec-color-med, 0.85)
+      );
+    }
+    &-2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($main-color-light, 0.85),
+        rgba($main-color-med, 0.85)
+      );
+    }
+    &-3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($third-color-light, 0.85),
+        rgba($third-color-med, 0.85)
+      );
+    }
+  }
+  .card-info {
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    font-size: 1.5rem;
+    &-item {
+      width: 60%;
+      display: inline-block;
+      padding: 1rem 0rem;
+      border-bottom: 1px solid #eee;
+    }
+    &-item:last-child {
+      border-bottom: none;
+    }
+  }
+  .call-to-action-tours {
+    .price-only {
+      color: $white-color;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+    }
+    .price-value {
+      color: $white-color;
+      font-size: 6rem;
+      margin-bottom: 8rem;
+    }
+  }
+}
+@media only screen and (max-width: 40.625em), only screen and (hover: none) {
+  .tour-card {
+    height: auto;
+    &-side {
+      position: relative;
+      &-front {
+        height: auto;
+        padding-bottom: 10rem;
+      }
+      &-back {
+        height: auto;
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -10rem;
+      }
+    }
+    .call-to-action-tours {
+      .price-only {
+        margin-top: 5rem;
+      }
+      .price-value {
+        margin-bottom: 4rem;
+      }
+      .btn {
+        margin-bottom: 6rem;
+      }
+    }
+    &:hover &-side-front {
+      transform: rotateY(0);
+    }
+    &:hover &-side-back {
+      transform: rotateY(0);
+    }
+  }
+}

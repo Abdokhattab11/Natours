@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+
+  @include response-tab-land {
+    font-size: 56.25%; // 1rem = 9px
+  }
+  @include response-tab-port {
+    font-size: 50%; // 1rem = 8px
+  }
+  @include response-large-screen {
+    font-size: 75%; // 1rem = 12px
+  }
+}
+
+::selection {
+  background-color: $main-color-med;
+  color: $white-color;
+}
